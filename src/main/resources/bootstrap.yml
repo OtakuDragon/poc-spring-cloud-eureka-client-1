@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: poc-spring-cloud-eureka-client-1
+server:
+  port: 8881

@@ -1,0 +1,8 @@
+eureka:
+  instance:
+    preferIpAddress: true #Sempre cadastrar no eureka o ip e não o hostname, hostname pode ser um problema para containeres docker
+  client:
+    registerWithEureka: true #Se registra no eureka server
+    fetchRegistry: true      #Define um cache local padrão para localização de serviços retornados pelo eureka service através do uso transparente da biblioteca Netflix Ribbon 
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/ #Define o local do eureka server
