@@ -12,10 +12,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient //Apenas para estrategia que utiliza diretamente o bean DiscoveryClient
 @EnableFeignClients  //Apenas para estretegia  utilizando interfaces anotadas do feign
 @SpringBootApplication
-public class PocSpringCloudEurekaClient1Application {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PocSpringCloudEurekaClient1Application.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 	
 	//Apenas para a estrategia do enhanced RestTemplate
