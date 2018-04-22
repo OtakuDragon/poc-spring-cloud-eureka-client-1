@@ -48,6 +48,16 @@ public class PocRestController {
 	@Autowired
 	private PocFeignClient pocFeignClient;
 	
+	/**
+	 * Observação no caso de utilzação de service gateway(Zuul)
+	 * 
+	 * No exemplo abaixo todas as chamadas estão referenciando diretamente
+	 * o serviço poc-spring-cloud-eureka-client-2, no caso da utilização de um
+	 * services gateway(Zuul) a utilização é a mesma com a diferença de que o host
+	 * sempre será o service id ou url do services gateway, e a escolha de qual
+	 * serviço usar sera feita na montagem do resto da URL de acordo com uma rota
+	 * configurada.
+	 */
 	@RequestMapping(method=RequestMethod.GET, value = "/{clientType}")
     public String consumeService(@PathVariable("clientType") String clientType) {
 		if(clientType.equals("enhancedRestTemplate")) {
